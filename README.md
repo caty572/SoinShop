@@ -1,48 +1,65 @@
 # SoinShop
 
+A parapharmacy storefront: browse products by category and brand, fill a cart, and place an order.
+
+| | Stack | Port |
+|---|---|---|
+| **Frontend** | React · Vite · Tailwind CSS | `3000` |
+| **Backend** | Node · Express · MySQL | `5000` |
+
 ```
 soinshop/
-├── frontend/   React + Vite + Tailwind (the website)
-└── backend/    Node + Express + MySQL (products, brands, orders API)
+├── frontend/   the website
+└── backend/    REST API, database schema and seed data
 ```
 
-## 1. Start MySQL
+## Quick start
 
-Start the Windows service **MYSQL80** (Services app, or an administrator terminal: `net start MYSQL80`).
+### 1. Database
 
-## 2. Backend (port 5000)
+Start the MySQL service. On Windows, run this in an administrator terminal (or use the Services app):
 
+```bash
+net start MYSQL80
 ```
+
+### 2. Backend
+
+```bash
 cd backend
 npm install
-copy .env.example .env      # then open .env and type your MySQL password in DB_PASSWORD
-npm run seed                # creates the "soinshop" database + tables and loads the 64 products and 12 brands
-npm run dev                 # starts the API on http://localhost:5000
+copy .env.example .env    # then set DB_PASSWORD to your MySQL password
+npm run seed              # creates the "soinshop" database, loads 64 products and 12 brands
+npm run dev               # API on http://localhost:5000
 ```
 
-Check it works: http://localhost:5000/api/products
+Check that it works at <http://localhost:5000/api/products>.
 
-| Route | What it does |
-|-------|--------------|
-| `GET /api/products` | all products (`?category=visage` to filter) |
-| `GET /api/products/:id` | one product |
-| `GET /api/brands` | brands |
-| `POST /api/orders` | saves an order (prices are read from MySQL) |
+### 3. Frontend
 
-Tables: `brands`, `products`, `orders`, `order_items` (see `backend/schema.sql`).
-
-## 3. Frontend (port 3000)
-
-```
+```bash
 cd frontend
 npm install --legacy-peer-deps
 npm run dev
 ```
 
-Open http://localhost:3000. Vite forwards `/api/...` to the backend.
-If the backend is not running, the site still shows the built-in product list, but orders cannot be saved.
+Open <http://localhost:3000>. Vite proxies `/api/*` to the backend.
 
-## Changing products
+> If the backend is offline, the site falls back to its built-in product list. Orders can't be saved until the API is running.
 
-Edit rows in MySQL (Workbench), or edit `backend/data/products.json` and run `npm run seed` again.
-Product pictures live in `frontend/src/assets/images/` (the `image` column stores the path).
+## API
+
+| Method | Route | Description |
+|--------|-------|-------------|
+| `GET` | `/api/health` | Service status |
+| `GET` | `/api/products` | All products. Filter with `?category=visage` |
+| `GET` | `/api/products/:id` | A single product |
+| `GET` | `/api/brands` | All brands |
+| `POST` | `/api/orders` | Place an order. Prices are read from MySQL, never from the client |
+
+Tables: `brands`, `products`, `orders`, `order_items`. See [backend/schema.sql](backend/schema.sql).
+
+## Managing products
+
+- **Data:** edit rows in MySQL Workbench, or edit [backend/data/products.json](backend/data/products.json) and run `npm run seed` again.
+- **Images:** place them in `frontend/src/assets/images/`. The `image` column stores the path.
