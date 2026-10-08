@@ -1,0 +1,6 @@
+{
+  "name": "SoinShop - Parapharmacie & Beauté en Ligne",
+  "description": "Boutique en ligne parapharmacie et soins de beauté en Tunisie. Produits solaires, soins visage, cheveux et compléments alimentaires.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

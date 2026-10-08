@@ -1,0 +1,74 @@
+[
+  {
+    "id": "alania",
+    "name": "alania",
+    "subtitle": "Laboratoire Dermatologique",
+    "description": "Expertise scientifique en dermo-cosmétique avancée et soins ciblés."
+  },
+  {
+    "id": "alliance",
+    "name": "ALLIANCE",
+    "subtitle": "Alliance Pharma",
+    "description": "Solutions pharmaceutiques de référence internationale en dermatologie."
+  },
+  {
+    "id": "almaflore",
+    "name": "ALMAFLORE",
+    "subtitle": "Laboratoires Botaniques",
+    "description": "Huiles végétales précieuses et aromathérapie 100% d'origine naturelle."
+  },
+  {
+    "id": "alvityl",
+    "name": "Alvityl",
+    "subtitle": "Santé & Vitalité",
+    "description": "La référence en vitamines et minéraux pour toute la famille depuis plus de 60 ans."
+  },
+  {
+    "id": "avene",
+    "name": "AVÈNE",
+    "subtitle": "Eau Thermale",
+    "description": "Soins dermatologiques apaisants pour peaux sensibles."
+  },
+  {
+    "id": "svr",
+    "name": "SVR",
+    "subtitle": "Laboratoire Dermatologique",
+    "description": "Soins visage, solaires et anti-imperfections haute efficacité."
+  },
+  {
+    "id": "ducray",
+    "name": "DUCRAY",
+    "subtitle": "Dermatologie",
+    "description": "Experts du cuir chevelu et de la chute de cheveux."
+  },
+  {
+    "id": "pharmaceris",
+    "name": "PHARMACERIS",
+    "subtitle": "Soins Dermo-Cosmétiques",
+    "description": "Soins capillaires et cutanés formulés pour les peaux sensibles."
+  },
+  {
+    "id": "laroche",
+    "name": "LA ROCHE-POSAY",
+    "subtitle": "Dermatologie",
+    "description": "Protection solaire et soins anti-imperfections recommandés par les dermatologues."
+  },
+  {
+    "id": "bioderma",
+    "name": "BIODERMA",
+    "subtitle": "Biologie & Dermatologie",
+    "description": "Eaux micellaires et soins hautes tolérance."
+  },
+  {
+    "id": "eucerin",
+    "name": "EUCERIN",
+    "subtitle": "Soins de la peau",
+    "description": "Soins hydratants et protections solaires dermatologiques."
+  },
+  {
+    "id": "isdin",
+    "name": "ISDIN",
+    "subtitle": "Photoprotection",
+    "description": "Références de la protection solaire quotidienne."
+  }
+]

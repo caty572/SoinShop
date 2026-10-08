@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/* Endless brand carousel: track holds two identical copies, so -50% loops seamlessly */
+@keyframes brands-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.brands-track { animation: brands-scroll 30s linear infinite; }
+.brands-marquee:hover .brands-track { animation-play-state: paused; }
